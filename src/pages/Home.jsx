@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 
 const Home = () => {
-  const [squares, setSquares] = useState(50)
+  const [tasks, setTasks] = useState([])
+  const [inputTask, setInputTask] = useState('')
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log('Form envoyé')
+  }
   return (
     <div>
       <h1>Etats</h1>
-      <h2>{squares}</h2>
 
-      <button onClick={() => { setSquares(150) }}>Modifier</button>
+      <form onSubmit={handleSubmit}>
+        <input onChange={e => setInputTask(e.target.value)} value={inputTask} type="text" />
+        <button type="submit">Ajouter une tâche</button>
+      </form>
     </div>
   )
 }
