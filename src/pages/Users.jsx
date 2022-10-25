@@ -42,6 +42,7 @@ const Users = () => {
     return (
         <div>
             <h1>Users</h1>
+            <p>Créer un utilisateur avec une possibilité de le changer ou de le supprimer</p>
             <form onSubmit={handleSubmit}>
                 <input placeholder='firstname' onChange={(e) => setInputName(e.target.value)} value={inputName} type="text" />
                 <input placeholder='age' onChange={(e) => setInputAge(e.target.value)} value={inputAge} type="number" />

@@ -29,6 +29,8 @@ const ArrayState = () => {
 
     return (
         <div>
+            <h1>Rectangle</h1>
+            <p>Genere un nombre de rectangle indiquer avec dimension et couleur random</p>
             <form onSubmit={handleSubmit}>
                 <input onChange={(e) => setInputNumber(e.target.value)} value={inputNumber} type="text" />
                 <button type="submit">Valider</button>
