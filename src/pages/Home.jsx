@@ -9,7 +9,7 @@ const Home = () => {
   }
   return (
     <div>
-      <h1>Etats</h1>
+      <h1>Etats test</h1>
 
       <form onSubmit={handleSubmit}>
         <input onChange={e => setInputTask(e.target.value)} value={inputTask} type="text" />
