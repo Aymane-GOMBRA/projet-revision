@@ -14,7 +14,11 @@ const Users = () => {
     }
     const handleSubmitEdit = e => {
         e.preventDefault()
-        splice()
+        const newState = [...users]
+        newState.splice(e, 1, [inputNameEdit, inputAgeEdit]);
+        setUsers(newState)
+        setInputNameEdit('');
+        setInputAgeEdit('');
     }
 
     const handleClickDelete = (e) => {
@@ -48,12 +52,16 @@ const Users = () => {
                     )
                 }
             </ul>
-            <h2>Edit</h2>
-            <form onSubmit={handleSubmitEdit}>
-                <input placeholder='firstname' onChange={(e) => setInputName(e.target.value)} value={inputNameEdit} type="text" />
-                <input placeholder='age' onChange={(e) => setInputAge(e.target.value)} value={inputAgeEdit} type="number" />
-                <button type="submit">editer</button>
-            </form>
+            <div>
+                <h2>Edit</h2>
+                <form onSubmit={handleSubmitEdit}>
+                    <input placeholder='firstname' onChange={(e) => setInputNameEdit(e.target.value)} value={inputNameEdit} type="text" />
+                    <input placeholder='age' onChange={(e) => setInputAgeEdit(e.target.value)} value={inputAgeEdit} type="number" />
+                    <button type="submit">editer</button>
+                </form>
+            </div>
+
+
         </div>
     )
 }
