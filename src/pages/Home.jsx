@@ -5,16 +5,32 @@ const Home = () => {
   const [inputTask, setInputTask] = useState('')
   const handleSubmit = e => {
     e.preventDefault()
-    console.log('Form envoyé')
+    setTasks([...tasks, inputTask]);
+    setInputTask('');
+  }
+  const handleClick = (e) => {
+    const newState = [...tasks]
+    newState.splice(e, 1)
+    setTasks(newState)
   }
   return (
     <div>
-      <h1>Etats test</h1>
+      <h1>Etats</h1>
 
       <form onSubmit={handleSubmit}>
         <input onChange={e => setInputTask(e.target.value)} value={inputTask} type="text" />
         <button type="submit">Ajouter une tâche</button>
       </form>
+      <ul>
+        {
+          tasks.map((task, index) =>
+            <li key={index}>
+              {task}
+              <button onClick={(e)=>{handleClick({index})}}>x</button>
+            </li>
+          )
+        }
+      </ul>
     </div>
   )
 }

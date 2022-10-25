@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
+import ArrayState from './pages/ArrayState'
 import Home from './pages/Home'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/array" element={<ArrayState />} />
       </Routes>
     </>
     

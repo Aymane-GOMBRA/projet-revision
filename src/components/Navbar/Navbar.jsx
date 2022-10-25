@@ -6,6 +6,7 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <Link to='/'>Home</Link>
+            <Link to='/array'>Rectangle</Link>
         </div>
     );
 }
