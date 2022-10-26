@@ -30,6 +30,9 @@ export default function Navbar() {
             <li>
                 <NavLink to="/films">Films</NavLink>
             </li>
+            <li>
+                <NavLink to="/lifting">Lifting State Up</NavLink>
+            </li>
         </ul>
     </nav>
 

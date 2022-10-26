@@ -1,29 +1,33 @@
 import React, { useEffect, useState } from 'react'
-import './Movie.css'
+import { randomColor } from '../../utils/random';
 
-const Movie = ({ title, year, index, handleClickDelete }) => {
+const Movie = ({ film, index, handleClickDelete, addDeleteMovie }) => {
     const [bgColor, setbgColor] = useState('');
-    const randomNumber = (min, max) => {
-        return Math.floor(Math.random() * max - min + min)
-    }
-    const randomColor = () => {
-        const color1 = randomNumber(0, 255)
-        const color2 = randomNumber(0, 255)
-        const color3 = randomNumber(0, 255)
-        return `rgba(${color1}, ${color2}, ${color3})`
-    }
+
+
+    useEffect(() => {
+        return () => {
+            addDeleteMovie()
+        }
+    })
     const backgroundColor = () => {
-        setbgColor({ background: randomColor() })
+        setbgColor(randomColor())
     }
 
     return (
 
-        <div className='movies'>
-            {title} {year} <br />
+        <div style={{
+            backgroundColor: bgColor,
+            width: "200px",
+            margin: "10px",
+            padding: "10px",
+            border: "solid 1px black"
+        }}>
+            {film.title} {film.year} <br />
             {
                 <div>
                     <button onClick={backgroundColor}>Change Color</button>
-                    <button onClick={(e) => { handleClickDelete(index) }}>delete</button>
+                    <button onClick={() => { handleClickDelete(index) }}>delete</button>
                 </div>
 
             }

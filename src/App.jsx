@@ -5,6 +5,7 @@ import LifeCycles from './pages/LifeCycles'
 import Users from './pages/Users'
 import Navbar from './components/Navbar/Navbar';
 import Films from './pages/Films'
+import LiftingStateUp from './pages/LiftingStateUp'
 
 function App() {
   return (
@@ -16,10 +17,12 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path='/cycles' element={<LifeCycles />} />
         <Route path='/films' element={<Films />} />
+        <Route path='/lifting' element={<LiftingStateUp />} />
       </Routes>
     </>
 
   )
 }
+
 
 export default App

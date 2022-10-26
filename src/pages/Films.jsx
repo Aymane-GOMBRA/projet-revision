@@ -11,6 +11,8 @@ const Films = () => {
     ])
     const [inputTitle, setInputTitle] = useState('')
     const [inputYear, setInputYear] = useState('')
+    const [nbDeleteMovies, setNbDeleteMovies] = useState(0)
+
     const handleSubmit = e => {
         e.preventDefault()
         setFilms([...films, {
@@ -28,10 +30,15 @@ const Films = () => {
 
     }
 
+    const addDeleteMovie = () => {
+        setNbDeleteMovies(nbDeleteMovies + 1)
+    }
+
 
     return (
         <div>
             <h1>Films</h1>
+            <p>films supprimé : {nbDeleteMovies} </p>
             <form onSubmit={handleSubmit}>
                 <input placeholder='Title' onChange={(e) => setInputTitle(e.target.value)} value={inputTitle} type="text" />
                 <input placeholder='Year' onChange={(e) => setInputYear(e.target.value)} value={inputYear} type="number" />
@@ -41,10 +48,10 @@ const Films = () => {
                 films.map((film, index) => (
                     <Movie
                         key={index}
-                        title={film.title}
-                        year={film.year}
+                        film={film}
                         index={index}
                         handleClickDelete={handleClickDelete}
+                        addDeleteMovie={addDeleteMovie}
                     />
                 ))
 
