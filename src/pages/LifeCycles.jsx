@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Animal from '../components/Navbar/LifeCycles/Animal'
+import Animal from '../components/LifeCycles/Animal'
 
 const LifeCycles = () => {
     const [animals, setAnimals] = useState([

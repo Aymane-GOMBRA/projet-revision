@@ -27,6 +27,9 @@ export default function Navbar() {
             <li>
                 <NavLink to="/cycles">Cycle de vie</NavLink>
             </li>
+            <li>
+                <NavLink to="/films">Films</NavLink>
+            </li>
         </ul>
     </nav>
 
