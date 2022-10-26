@@ -33,6 +33,9 @@ export default function Navbar() {
             <li>
                 <NavLink to="/lifting">Lifting State Up</NavLink>
             </li>
+            <li>
+                <NavLink to="/converter">Converter</NavLink>
+            </li>
         </ul>
     </nav>
 
