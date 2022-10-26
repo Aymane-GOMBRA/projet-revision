@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 
-const FormConverter = ({ moneys, setMoney }) => {
-    const [inputMoney, setInputMoney] = useState('')
+const FormConverter = ({ value, setValue }) => {
+    const [inputEur, setInputEur] = useState('')
 
     const handleSubmit = e => {
         e.preventDefault()
-        setInputMoney(e.target[0].value)
-        setMoney([...moneys, (inputMoney) + 1])
+        setInputEur(e.target[0].value)
+        setValue(parseFloat(inputEur))
+        setInputEur('')
     }
     return (
         <form onSubmit={handleSubmit}>
-            <input onChange={e => setInputMoney(e.target.value)} value={inputMoney} type="number" />
-            <button type="submit">Valider</button>
+            <input onChange={e => setInputEur(e.target.value)} value={inputEur} type="number" />
+            <button type="submit">Convertir</button>
         </form>
     )
 }

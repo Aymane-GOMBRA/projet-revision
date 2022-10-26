@@ -1,5 +1,5 @@
 export const randomNumber = (min, max) => {
-    return Math.floor(Math.random() * max - min + min)
+    return Math.floor(Math.random() * (max - min) + min)
 }
 export const randomColor = () => {
     const color1 = randomNumber(0, 255)

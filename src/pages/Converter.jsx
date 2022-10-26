@@ -3,12 +3,12 @@ import DisplayConverter from '../components/Converter/DisplayConverter'
 import FormConverter from '../components/Converter/FormConverter'
 
 const Converter = () => {
-    const [moneys, setMoney] = useState([])
+    const [value, setValue] = useState()
     return (
         <div>
             <h1>Converter</h1>
-            <FormConverter moneys={moneys} setMoney={setMoney} />
-            <DisplayConverter moneys={moneys} />
+            <FormConverter setValue={setValue} />
+            <DisplayConverter value={value} setValue={setValue} />
         </div>
     )
 }
