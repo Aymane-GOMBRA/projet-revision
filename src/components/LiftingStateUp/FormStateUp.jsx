@@ -7,6 +7,7 @@ const FormStateUp = ({ names, setNames }) => {
     const handleSubmit = e => {
         e.preventDefault()
         setNames([...names, inputName])
+        // setNames(oldState => [...oldState, inputName]) si on importe pas names on utilise ca 
         setInputName('')
     }
     return (
