@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import Films from './pages/Films'
 import LiftingStateUp from './pages/LiftingStateUp'
 import Converter from './pages/Converter'
+import Slider from './pages/Slider'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/films' element={<Films />} />
         <Route path='/lifting' element={<LiftingStateUp />} />
         <Route path='/converter' element={<Converter />} />
+        <Route path='/slider' element={<Slider />} />
       </Routes>
     </>
 

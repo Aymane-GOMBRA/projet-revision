@@ -36,6 +36,9 @@ export default function Navbar() {
             <li>
                 <NavLink to="/converter">Converter</NavLink>
             </li>
+            <li>
+                <NavLink to="/slider">Slider</NavLink>
+            </li>
         </ul>
     </nav>
 
