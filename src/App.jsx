@@ -8,6 +8,8 @@ import Films from './pages/Films'
 import LiftingStateUp from './pages/LiftingStateUp'
 import Converter from './pages/Converter'
 import Slider from './pages/Slider'
+import Borne from './pages/Borne'
+import Students from './pages/Students'
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         <Route path='/lifting' element={<LiftingStateUp />} />
         <Route path='/converter' element={<Converter />} />
         <Route path='/slider' element={<Slider />} />
+        <Route path='/borne' element={<Borne />} />
+        <Route path='/students' element={<Students />} />
+
       </Routes>
     </>
 

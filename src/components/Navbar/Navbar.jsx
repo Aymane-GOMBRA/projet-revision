@@ -39,6 +39,12 @@ export default function Navbar() {
             <li>
                 <NavLink to="/slider">Slider</NavLink>
             </li>
+            <li>
+                <NavLink to="/borne">Borne</NavLink>
+            </li>
+            <li>
+                <NavLink to="/students">Students</NavLink>
+            </li>
         </ul>
     </nav>
 

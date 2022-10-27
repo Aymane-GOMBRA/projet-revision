@@ -13,9 +13,7 @@ const Slider = () => {
     const [selectPic, setSelectPic] = useState(0)
 
     return (
-        <div style={{
-            textAlign: 'center'
-        }}>
+        <div>
             <h1>Slider</h1>
             <View selectPic={selectPic} pictures={pictures} setSelectPic={setSelectPic} />
             <Thumbnails pictures={pictures} selectPic={selectPic} setSelectPic={setSelectPic} />
