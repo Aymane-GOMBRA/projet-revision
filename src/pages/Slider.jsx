@@ -17,7 +17,7 @@ const Slider = () => {
             textAlign: 'center'
         }}>
             <h1>Slider</h1>
-            <View selectPic={selectPic} pictures={pictures} />
+            <View selectPic={selectPic} pictures={pictures} setSelectPic={setSelectPic} />
             <Thumbnails pictures={pictures} selectPic={selectPic} setSelectPic={setSelectPic} />
 
         </div>

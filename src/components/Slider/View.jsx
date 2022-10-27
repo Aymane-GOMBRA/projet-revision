@@ -1,6 +1,6 @@
 import React from 'react'
 
-const View = ({ selectPic, pictures }) => {
+const View = ({ selectPic, pictures, setSelectPic }) => {
     return (
         <div className='containerView'>
             <button>left</button>
