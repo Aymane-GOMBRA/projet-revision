@@ -1,0 +1,11 @@
+.mealsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.meal {
+  width: 400px;
+  text-align: center;
+}
+.cartContainer {
+  text-align: center;
+}

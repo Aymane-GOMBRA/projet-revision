@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Cart = ({ cartMeal }) => {
+    const [toogle, setToogle] = useState(false)
     const totalCart = () => {
         let total = 0
         cartMeal.forEach(element => {
@@ -9,14 +10,17 @@ const Cart = ({ cartMeal }) => {
         return total
     }
     return (
-        <div>
-            <h3>Cart</h3>
+        <div className='cartContainer'>
+            <button onClick={() => setToogle(!toogle)}>Panier</button>
             {
+                toogle &&
                 cartMeal.map((item, i) => (
-                    <p key={i}>{item.titre} - {item.price} </p>
+                    <p key={i}>{item.titre} - {item.price}€ </p>
                 ))
             }
-            <div> {totalCart()} </div>
+            {toogle &&
+                <div> {totalCart()} </div>
+            }
         </div>
     )
 }
