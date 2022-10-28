@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import { StudentsContext } from '../../context/StudentContext'
+import { StudentsContext, useStudents } from '../../context/StudentContext'
 
 const Student = ({ student, index }) => {
-    const { setStudents, students } = useContext(StudentsContext)
+    const { setStudents, students } = useStudents()
     const handleClick = () => {
         const newArray = [...students]
         newArray.splice(index, 1)

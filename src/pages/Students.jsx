@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import StudentsList from '../components/Students/StudentsList'
-import { StudentsContext } from '../context/StudentContext'
+import { StudentsProvider } from '../context/StudentContext'
 
 const Students = () => {
     const [students, setStudents] = useState([
@@ -21,8 +21,8 @@ const Students = () => {
         },
     ])
     return (
-        <StudentsContext.Provider
-            value={{
+        <StudentsProvider
+            initialValue={{
                 setStudents,
                 students
             }}>
@@ -30,7 +30,7 @@ const Students = () => {
                 <h1>Student</h1>
                 <StudentsList students={students} />
             </div>
-        </StudentsContext.Provider>
+        </StudentsProvider>
     )
 }
 
