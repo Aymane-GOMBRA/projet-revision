@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { StudentsContext, useStudents } from '../../context/StudentContext'
+import { useStudents } from '../../context/StudentContext'
 
 const Student = ({ student, index }) => {
     const { setStudents, students } = useStudents()
