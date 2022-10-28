@@ -10,6 +10,7 @@ import Converter from './pages/Converter'
 import Slider from './pages/Slider'
 import Borne from './pages/Borne'
 import Students from './pages/Students'
+import Dog from './pages/Dog'
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Route path='/slider' element={<Slider />} />
         <Route path='/borne' element={<Borne />} />
         <Route path='/students' element={<Students />} />
-
+        <Route path='/dog' element={<Dog />} />
       </Routes>
     </>
 
